@@ -39,13 +39,13 @@ function renderPerson(person) {
   container.append(hobbieList)
   for (let i = 0; i < person.hobbies.length;i++){
     let li = document.createElement("li")
-    li.innerText = `${examplePerson.hobbies[i]}`
+    li.innerText = `${person.hobbies[i]}`
     hobbieList.append(li)
   }
   let shippingAddressTitle = document.createElement("h4")
   shippingAddressTitle.innerText = "Shipping Address"
   container.append(shippingAddressTitle)
-  let streetNumber = `${person.address.number} ${examplePerson.address.street}`
+  let streetNumber = `${person.address.number} ${person.address.street}`
   let cityStateZip = `${person.address.city} ${person.address.state} ${person.address.zipcode}`
   let shippingAddress = document.createElement("p")
   shippingAddress.innerText = ` ${nameFirstLast} \n ${streetNumber}\n ${cityStateZip}
@@ -75,10 +75,22 @@ render your person to the page.
 */
 
 // Your Code Here
+let myPerson = {
+  firstName: "",
+  lastName: "",
+  hobbies: ["", "", ""],
+  address: {
+    number: 123,
+    street: "",
+    city: "",
+    state: "",
+    zipcode: "",
+  },
+  "favorite color": "",
+}
 
 
-
-
+renderPerson(myPerson)
 /*
 ---------------------------------------------------------------------------
 Part Three
@@ -89,14 +101,16 @@ Follow the instruction on my.kenzie
 
 function changePersonToBart(person) {
   // Your Code Here
-
-
+  person.firstName = "Bart"
+  person.hobbies.splice(2, 1, "Skateboarding")
+  person["favorite colore"] = "orange"
 }
 
 // Then, call the function with the argument examplePerson
 // Assign the result to a new variable.  Then call renderPerson with the 
 // new variable
-
+changePersonToBart(examplePerson)
+renderPerson(examplePerson)
 /*
 ---------------------------------------------------------------------------
 Part Four (Optional Practice)
