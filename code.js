@@ -25,8 +25,38 @@ to the instructions on my.kenzie
 
 function renderPerson(person) {
   // Your Code Here
-
-
+  let container = document.createElement("div")
+  container.className = "card"
+  document.body.append(container)
+  let names = document.createElement("h2")
+  let nameFirstLast = `${person.firstName} ${person.lastName}`
+  names.innerText = nameFirstLast
+  container.append(names)
+  let hobbies = document.createElement("h4")
+  hobbies.innerText = "Hobbies"
+  container.append (hobbies)
+  let hobbieList = document.createElement("ul")
+  container.append(hobbieList)
+  for (let i = 0; i < person.hobbies.length;i++){
+    let li = document.createElement("li")
+    li.innerText = `${examplePerson.hobbies[i]}`
+    hobbieList.append(li)
+  }
+  let shippingAddressTitle = document.createElement("h4")
+  shippingAddressTitle.innerText = "Shipping Address"
+  container.append(shippingAddressTitle)
+  let streetNumber = `${person.address.number} ${examplePerson.address.street}`
+  let cityStateZip = `${person.address.city} ${person.address.state} ${person.address.zipcode}`
+  let shippingAddress = document.createElement("p")
+  shippingAddress.innerText = ` ${nameFirstLast} \n ${streetNumber}\n ${cityStateZip}
+    `
+  container.append(shippingAddress)
+  let favoriteColorTitle = document.createElement("h4")
+  favoriteColorTitle.innerText = "Favorite Color"
+  container.append(favoriteColorTitle)
+  let favoriteColor = document.createElement("p")
+  favoriteColor.innerText = `${person["favorite color"]}`
+  container.append(favoriteColor)
 }
 
 renderPerson(examplePerson);
