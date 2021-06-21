@@ -46,7 +46,7 @@ function renderPerson(person) {
   shippingAddressTitle.innerText = "Shipping Address"
   container.append(shippingAddressTitle)
   let streetNumber = `${person.address.number} ${person.address.street}`
-  let cityStateZip = `${person.address.city} ${person.address.state} ${person.address.zipcode}`
+  let cityStateZip = `${person.address.city}, ${person.address.state} ${person.address.zipcode}`
   let shippingAddress = document.createElement("p")
   shippingAddress.innerText = ` ${nameFirstLast} \n ${streetNumber}\n ${cityStateZip}
     `
@@ -76,17 +76,17 @@ render your person to the page.
 
 // Your Code Here
 let myPerson = {
-  firstName: "",
-  lastName: "",
-  hobbies: ["", "", ""],
+  firstName: "Peter",
+  lastName: "Griffin",
+  hobbies: ["Hanging out with Brian", "Drinking Pawtucket Pat Ale", "Fighting Giant Chickens"],
   address: {
-    number: 123,
-    street: "",
-    city: "",
-    state: "",
-    zipcode: "",
+    number: 31,
+    street: "Spooner Street",
+    city: "Quahog",
+    state: "Rhode Island",
+    zipcode: "98765",
   },
-  "favorite color": "",
+  "favorite color": "green",
 }
 
 
@@ -119,7 +119,22 @@ Create your own object!
 */
 
 // Your Code Here
+function changePersontoDog(person){
+  person.firstName = "Scooby"
+  person.lastName = "Doo"
+  person.hobbies.splice(0,1, "Hanging with Shaggy")
+  person.hobbies.splice(1,1, "Eating Scooby Snacks")
+  person.hobbies.splice(2,1, "Hiding from ghosts")
+  person.address.number = "6R00VY"
+  person.address.street = "The Mystery Machine"
+  person.address.city = "Crystal Cove"
+  person.address.state = "Stateslyvania"
+  person.address.zipcode = "80000"
+  person["favorite colore"] = "brown"
+}
 
+changePersontoDog(myPerson)
+renderPerson(myPerson)
 
 
 
