@@ -1,5 +1,6 @@
-# Kenzie Academy JavaScript Assignment
+Cartoon Character bio cards
 
-Complete your work inside of `code.js`
+creating an intial object.
 
-Follow the instructions provided on my.kenzie.academy for this assignment.
+Creating functions to create new objects while splicing in new
+information for new cartoon characters.
