@@ -1,9 +1,3 @@
-/*
----------------------------------------------------------------------------
-Objects - Part One
-*/
-
-// Do not modify this object here.
 let examplePerson = {
   firstName: "Homer",
   lastName: "Simpson",
@@ -17,11 +11,6 @@ let examplePerson = {
   },
   "favorite color": "yellow",
 };
-
-/*
-Using the function below, print the person to the page according 
-to the instructions on my.kenzie
-*/
 
 function renderPerson(person) {
   // Your Code Here
@@ -61,20 +50,6 @@ function renderPerson(person) {
 
 renderPerson(examplePerson);
 
-/*
----------------------------------------------------------------------------
-Part Two
-
-Create a new person.  
-
-Your object should look very similar to the Person object above!
-But you should use different values.  Put whatever you want for the values.
-
-Call renderPerson() and pass your new person object in as an argument to 
-render your person to the page.
-*/
-
-// Your Code Here
 let myPerson = {
   firstName: "Peter",
   lastName: "Griffin",
@@ -91,13 +66,6 @@ let myPerson = {
 
 
 renderPerson(myPerson)
-/*
----------------------------------------------------------------------------
-Part Three
-
-Modify the person object to change them to bart.  
-Follow the instruction on my.kenzie
-*/
 
 function changePersonToBart(person) {
   // Your Code Here
@@ -106,19 +74,9 @@ function changePersonToBart(person) {
   person["favorite colore"] = "orange"
 }
 
-// Then, call the function with the argument examplePerson
-// Assign the result to a new variable.  Then call renderPerson with the 
-// new variable
 changePersonToBart(examplePerson)
 renderPerson(examplePerson)
-/*
----------------------------------------------------------------------------
-Part Four (Optional Practice)
 
-Create your own object!
-*/
-
-// Your Code Here
 function changePersontoDog(person){
   person.firstName = "Scooby"
   person.lastName = "Doo"
